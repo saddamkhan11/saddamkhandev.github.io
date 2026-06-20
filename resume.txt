@@ -1,0 +1,49 @@
+	Saddam Khan
+Software Engineer 
+📍 Karachi, Pakistan 📧 workwithsaddam@outlook.com 📞 0307-2843281
+🔗 SADDAM KHAN | LinkedIn 
+Objective
+ 
+Dedicated Software Engineer combined experience in avionics systems and software development. Skilled in C#, ASP.NET MVC, and SQL Server with a proven track record of delivering scalable web applications and TPS(test program set) solutions. Strong background in avionics repair and technical systems support within high-pressure environments. Passionate about building innovative digital solutions and mentoring future developers.
+Experience
+ 
+Pakistan Air Force | Avionics Repair Technician	Oct 2018 – Feb 2023
+•	Performed avionics system repair and maintenance in high-pressure environments.
+•	Delivered technical support ensuring operational readiness of aircraft systems.
+•	Applied troubleshooting methodologies to resolve complex technical issues.
+•	Reverse engineering for complex systems.
+Pakistan Air Force | C# TPS & .NET Developer	Feb 2023 – Feb 2026 
+•	Developed and maintained test program sets (TPS) using C# and .NET frameworks.
+•	Built scalable web applications with ASP.NET MVC and SQL Server.
+•	Automated testing processes to improve efficiency and reliability.
+•	Collaborated with cross-functional teams to deliver technical solutions.
+Education
+ 
+BS Software Engineering – Virtual University of Pakistan				 Jan 2026
+ADSE (Software Engineering) – Aptech Learning Shahrah-e-Faisal 			April 2022
+ICS (Intermediate) – Govt National College Karachi					
+Matriculation – Fazaia Degree College Faisal Karachi
+Skills & abilities
+ 
+•	Programming & Frameworks: C#, .NET, ASP.NET Core, Java, JavaScript, PHP, HTML, CSS, Bootstrap, Flutter
+•	Databases: SQL Server, MySQL
+•	CMS & Platforms: WordPress, Shopify
+•	Tools & Platforms: Git, MS Office, TPS Development (Teradyne)
+•	Soft Skills: Problem-Solving, Technical Mentoring, Clear Communication, Team Collaboration
+Projects
+ 
+• IoT Solar Automatic Rotation – Designed and implemented IoT-based solar tracking system.
+• Solar E-Store (FYP) – Developed an e-commerce application using Flutter.
+Interests/Hobbies 
+•	Reading technical journals and articles
+•	Exploring innovations in AI and software engineering
+•	Active participation in developer communities
+•	Researching emerging technologies
+Languages 
+•	English (Professional)
+•	Urdu (Native)
+
+
+
+
+
