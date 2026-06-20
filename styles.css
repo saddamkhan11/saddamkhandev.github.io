@@ -130,19 +130,66 @@ body {
   max-width: 720px;
 }
 
-.hero-badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  color: var(--accent);
-  background: var(--accent-dim);
-  border: 1px solid rgba(20, 184, 166, 0.2);
-  padding: 4px 14px;
-  border-radius: 20px;
-  font-weight: 500;
-  margin-bottom: 24px;
-  letter-spacing: 0.3px;
+/* -------- PROFILE PHOTO -------- */
+.hero-photo-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   animation: fIn 0.6s ease forwards;
+}
+
+.hero-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 2px solid var(--accent);
+  animation: photoGlow 3s ease-in-out infinite;
+}
+
+@keyframes photoGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(20, 184, 166, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(20, 184, 166, 0.6); }
+}
+
+.hero-photo-ring {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(20, 184, 166, 0.2);
+  animation: ringSpin 6s linear infinite;
+}
+
+.hero-photo-ring-2 {
+  width: 140px;
+  height: 140px;
+  border-color: rgba(20, 184, 166, 0.1);
+  border-style: dotted;
+  animation-direction: reverse;
+  animation-duration: 8s;
+}
+
+@keyframes ringSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.hero-greeting {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-2);
+  font-weight: 500;
+  margin-bottom: 4px;
+  opacity: 0;
+  animation: fIn 0.6s ease 0.1s forwards;
 }
 
 .hero-title {
@@ -156,7 +203,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   opacity: 0;
-  animation: fIn 0.6s ease 0.1s forwards;
+  animation: fIn 0.6s ease 0.2s forwards;
 }
 
 .hero-subtitle {
@@ -166,7 +213,7 @@ body {
   margin-bottom: 16px;
   min-height: 1.8rem;
   opacity: 0;
-  animation: fIn 0.6s ease 0.2s forwards;
+  animation: fIn 0.6s ease 0.3s forwards;
 }
 
 .cursor {
@@ -183,7 +230,7 @@ body {
   margin: 0 auto 32px;
   line-height: 1.7;
   opacity: 0;
-  animation: fIn 0.6s ease 0.3s forwards;
+  animation: fIn 0.6s ease 0.4s forwards;
 }
 
 .hero-buttons {
@@ -193,7 +240,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 44px;
   opacity: 0;
-  animation: fIn 0.6s ease 0.4s forwards;
+  animation: fIn 0.6s ease 0.5s forwards;
 }
 
 .hero-stats {
@@ -201,7 +248,7 @@ body {
   justify-content: center;
   gap: 48px;
   opacity: 0;
-  animation: fIn 0.6s ease 0.5s forwards;
+  animation: fIn 0.6s ease 0.6s forwards;
 }
 
 .hero-stat {
@@ -735,6 +782,10 @@ body {
   .hero-title { font-size: 2.4rem; }
   .hero-subtitle { font-size: 1rem; }
   .hero-desc { font-size: 0.9rem; }
+  .hero-photo-wrap { width: 100px; height: 100px; }
+  .hero-photo { width: 92px; height: 92px; }
+  .hero-photo-ring { width: 100px; height: 100px; }
+  .hero-photo-ring-2 { width: 118px; height: 118px; }
 
   .nav-links {
     position: fixed;
@@ -766,6 +817,10 @@ body {
 @media (max-width: 640px) {
   .hero-title { font-size: 2rem; }
   .hero-stats { gap: 24px; }
+  .hero-photo-wrap { width: 90px; height: 90px; }
+  .hero-photo { width: 82px; height: 82px; }
+  .hero-photo-ring { width: 90px; height: 90px; }
+  .hero-photo-ring-2 { width: 106px; height: 106px; }
   .hero-stat-num { font-size: 1.5rem; }
   .form-row { grid-template-columns: 1fr; }
   .edu-grid { grid-template-columns: 1fr; }
@@ -779,6 +834,10 @@ body {
   .hero-title { font-size: 1.7rem; letter-spacing: -1px; }
   .hero-subtitle { font-size: 0.9rem; }
   .hero-desc { font-size: 0.85rem; }
+  .hero-photo-wrap { width: 80px; height: 80px; margin-bottom: 16px; }
+  .hero-photo { width: 74px; height: 74px; }
+  .hero-photo-ring { width: 80px; height: 80px; }
+  .hero-photo-ring-2 { width: 94px; height: 94px; }
   .hero-buttons { flex-direction: column; }
   .hero-buttons .btn { width: 100%; }
   .hero-stats { flex-direction: column; gap: 8px; align-items: center; }
