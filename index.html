@@ -3,28 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saddam Khan | Software Engineer &amp; Agentic AI Developer</title>
+  <title>Saddam Khan | Software Engineer</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <div class="loader-bar"></div>
-    </div>
-  </div>
-
-  <header class="header" id="header">
+  <header class="header">
     <nav class="nav container">
-      <a href="#" class="logo">SK<span class="text-accent">.</span></a>
+      <a href="#" class="logo">SK<span class="accent">.</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -32,311 +26,244 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero" id="hero">
-      <div class="hero-bg"></div>
-      <div class="container hero-content">
-        <div class="hero-text-col">
-          <div class="hero-badge reveal-up">Available for projects · 2026</div>
-          <p class="hero-greeting reveal-up">Hi, I'm</p>
-          <h1 class="hero-title reveal-up">
-            <span class="hero-name">Saddam Khan</span>
-          </h1>
-          <p class="hero-subtitle reveal-up">
-            <span class="typing-text" id="typingText"></span><span class="cursor">|</span>
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <span class="hero-badge">Available for projects</span>
+      <h1 class="hero-title">
+        Saddam Khan
+      </h1>
+      <p class="hero-subtitle">
+        <span class="typing" id="typingText"></span><span class="cursor">|</span>
+      </p>
+      <p class="hero-desc">
+        Software Engineer &amp; Agentic AI Developer — building scalable applications
+        with C#, .NET, and modern AI frameworks.
+      </p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="resume.pdf" target="_blank" class="btn btn-ghost">Resume ↗</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="6">0</span><span class="accent">+</span>
+          <span class="hero-stat-label">Years Exp.</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="10">0</span><span class="accent">+</span>
+          <span class="hero-stat-label">Projects</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="8">0</span><span class="accent">+</span>
+          <span class="hero-stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">About</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Software Engineer &amp; Agentic AI Developer with experience in avionics systems
+            and full-stack development. Skilled in C#, ASP.NET MVC, SQL Server, and AI agent
+            development with a track record of delivering scalable web applications and
+            intelligent automation.
           </p>
-          <p class="hero-desc reveal-up">
-            Software Engineer &amp; Agentic AI Developer — crafting scalable web applications
-            with C#, .NET, and building intelligent AI agents that reason and execute.
+          <p>
+            Currently expanding into Agentic AI — building autonomous agents that reason, plan,
+            and execute real-world workflows. Background in avionics repair and technical
+            systems support in high-pressure environments.
           </p>
-          <div class="hero-actions reveal-up">
-            <a href="#projects" class="btn btn-primary">View My Work</a>
-            <a href="#contact" class="btn btn-outline">Let's Talk</a>
-            <a href="resume.pdf" target="_blank" class="btn btn-ghost" download>Resume ↗</a>
-          </div>
-          <div class="hero-stats reveal-up">
-            <div class="hero-stat">
-              <span class="hero-stat-value"><span class="hero-stat-num" data-count="6">0</span><span class="text-accent">+</span></span>
-              <span class="hero-stat-label">Years Experience</span>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-value"><span class="hero-stat-num" data-count="10">0</span><span class="text-accent">+</span></span>
-              <span class="hero-stat-label">Projects Done</span>
-            </div>
-            <div class="hero-stat">
-              <span class="hero-stat-value"><span class="hero-stat-num" data-count="8">0</span><span class="text-accent">+</span></span>
-              <span class="hero-stat-label">Technologies</span>
-            </div>
-          </div>
         </div>
-        <div class="hero-visual-col reveal-up">
-          <div class="code-window">
-            <div class="code-header">
-              <span class="code-dot red"></span>
-              <span class="code-dot yellow"></span>
-              <span class="code-dot green"></span>
-              <span class="code-title">portfolio.cs</span>
-            </div>
-            <div class="code-body">
-              <div class="code-line" style="--line:1"><span class="kw">using</span> System;</div>
-              <div class="code-line" style="--line:2"><span class="kw">using</span> AI;</div>
-              <div class="code-line" style="--line:3"> </div>
-              <div class="code-line" style="--line:4"><span class="kw">class</span> <span class="type">SaddamKhan</span></div>
-              <div class="code-line" style="--line:5">{</div>
-              <div class="code-line" style="--line:6">  <span class="kw">static void</span> <span class="fn">Build</span>()</div>
-              <div class="code-line" style="--line:7">  {</div>
-              <div class="code-line" style="--line:8">    <span class="kw">var</span> app = <span class="kw">new</span> <span class="type">WebApp</span>();</div>
-              <div class="code-line" style="--line:9">    app.<span class="fn">Scale</span>().<span class="fn">Ship</span>();</div>
-              <div class="code-line" style="--line:10">  }</div>
-              <div class="code-line" style="--line:11">}</div>
-              <div class="code-cursor-line"><span class="cursor-block">▌</span></div>
-            </div>
+        <div class="about-details reveal">
+          <div class="detail">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">Karachi, Pakistan</span>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">workwithsaddam@outlook.com</span>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Phone</span>
+            <span class="detail-value">0307-2843281</span>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Status</span>
+            <span class="detail-value accent">Open to Work</span>
           </div>
         </div>
       </div>
-      <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-number">01</span>
-          <h2 class="section-title">About Me</h2>
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="exp-list">
+        <div class="exp-card reveal">
+          <div class="exp-top">
+            <span class="exp-tag">Present</span>
+            <span class="exp-date">Feb 2023 – Feb 2026</span>
+          </div>
+          <h3 class="exp-role">C# TPS &amp; .NET Developer</h3>
+          <span class="exp-org">Pakistan Air Force</span>
+          <ul class="exp-duties">
+            <li>Developed and maintained test program sets (TPS) using C# and .NET</li>
+            <li>Built scalable web applications with ASP.NET MVC and SQL Server</li>
+            <li>Automated testing processes to improve efficiency and reliability</li>
+            <li>Collaborated with cross-functional teams on technical solutions</li>
+          </ul>
         </div>
-        <div class="about-grid">
-          <div class="about-text reveal">
-            <p>
-              Software Engineer &amp; Agentic AI Developer with combined experience in avionics systems
-              and software development. Skilled in C#, ASP.NET MVC, SQL Server, and AI agent development
-              with a proven track record of delivering scalable web applications, TPS solutions, and
-              intelligent automation.
-            </p>
-            <p>
-              Currently expanding into Agentic AI — building autonomous agents that reason, plan,
-              and execute real workflows using modern AI frameworks. Strong background in avionics
-              repair and technical systems support within high-pressure environments.
-            </p>
-            <div class="about-tags">
-              <span>📍 Karachi, Pakistan</span>
-              <span>🌍 Remote Worldwide</span>
-              <span>💼 Open to Work</span>
-            </div>
+        <div class="exp-card reveal">
+          <div class="exp-top">
+            <span class="exp-tag past">Past</span>
+            <span class="exp-date">Oct 2018 – Feb 2023</span>
           </div>
-          <div class="about-info reveal">
-            <div class="info-card">
-              <span class="info-icon">✉</span>
-              <div>
-                <span class="info-label">Email</span>
-                <span class="info-value">workwithsaddam@outlook.com</span>
-              </div>
-            </div>
-            <div class="info-card">
-              <span class="info-icon">📞</span>
-              <div>
-                <span class="info-label">Phone</span>
-                <span class="info-value">0307-2843281</span>
-              </div>
-            </div>
-            <div class="info-card">
-              <span class="info-icon">🔗</span>
-              <div>
-                <span class="info-label">LinkedIn</span>
-                <span class="info-value">/in/saddamkhan</span>
-              </div>
-            </div>
-          </div>
+          <h3 class="exp-role">Avionics Repair Technician</h3>
+          <span class="exp-org">Pakistan Air Force</span>
+          <ul class="exp-duties">
+            <li>Performed avionics system repair and maintenance</li>
+            <li>Delivered technical support for aircraft systems readiness</li>
+            <li>Applied troubleshooting for complex technical issues</li>
+            <li>Reverse engineering for complex systems</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="experience" class="section section-alt">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-number">02</span>
-          <h2 class="section-title">Experience</h2>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-meta">
-                <span class="timeline-tag">Present</span>
-                <span class="timeline-date">Feb 2023 – Feb 2026</span>
-              </div>
-              <h3 class="timeline-role">C# TPS &amp; .NET Developer</h3>
-              <span class="timeline-org">Pakistan Air Force</span>
-              <ul class="timeline-list">
-                <li>Developed and maintained test program sets (TPS) using C# and .NET frameworks</li>
-                <li>Built scalable web applications with ASP.NET MVC and SQL Server</li>
-                <li>Automated testing processes to improve efficiency and reliability</li>
-                <li>Collaborated with cross-functional teams to deliver technical solutions</li>
-              </ul>
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-meta">
-                <span class="timeline-tag tag-past">Past</span>
-                <span class="timeline-date">Oct 2018 – Feb 2023</span>
-              </div>
-              <h3 class="timeline-role">Avionics Repair Technician</h3>
-              <span class="timeline-org">Pakistan Air Force</span>
-              <ul class="timeline-list">
-                <li>Performed avionics system repair and maintenance in high-pressure environments</li>
-                <li>Delivered technical support ensuring operational readiness of aircraft systems</li>
-                <li>Applied troubleshooting methodologies to resolve complex technical issues</li>
-                <li>Reverse engineering for complex systems</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Skills</h2>
+      <div class="skills-wrap reveal">
+        <span class="skill">C#</span>
+        <span class="skill">.NET</span>
+        <span class="skill">ASP.NET Core</span>
+        <span class="skill">SQL Server</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">PHP</span>
+        <span class="skill">Java</span>
+        <span class="skill">HTML / CSS</span>
+        <span class="skill">Bootstrap</span>
+        <span class="skill">Flutter</span>
+        <span class="skill">Python</span>
+        <span class="skill">Git / GitHub</span>
+        <span class="skill">WordPress</span>
+        <span class="skill">Shopify</span>
+        <span class="skill">TPS (Teradyne)</span>
+        <span class="skill">Agentic AI</span>
+        <span class="skill">LLMs / Prompt Eng.</span>
+        <span class="skill">AI Automation</span>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-number">03</span>
-          <h2 class="section-title">Skills &amp; Expertise</h2>
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+      <div class="proj-grid">
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <span class="proj-badge">FYP</span>
+          </div>
+          <h3 class="proj-title">IoT Solar Automatic Rotation</h3>
+          <p class="proj-desc">IoT-based solar tracking system that optimizes energy capture through automatic panel rotation based on sun position.</p>
+          <div class="proj-tech">
+            <span>Flutter</span>
+            <span>IoT</span>
+          </div>
         </div>
-        <div class="skills-grid reveal">
-          <div class="skill-tag" style="--idx:0">C#</div>
-          <div class="skill-tag" style="--idx:1">.NET</div>
-          <div class="skill-tag" style="--idx:2">ASP.NET Core</div>
-          <div class="skill-tag" style="--idx:3">SQL Server</div>
-          <div class="skill-tag" style="--idx:4">MySQL</div>
-          <div class="skill-tag" style="--idx:5">JavaScript</div>
-          <div class="skill-tag" style="--idx:6">PHP</div>
-          <div class="skill-tag" style="--idx:7">Java</div>
-          <div class="skill-tag" style="--idx:8">HTML / CSS</div>
-          <div class="skill-tag" style="--idx:9">Bootstrap</div>
-          <div class="skill-tag" style="--idx:10">Flutter</div>
-          <div class="skill-tag" style="--idx:11">Python</div>
-          <div class="skill-tag" style="--idx:12">Git / GitHub</div>
-          <div class="skill-tag" style="--idx:13">WordPress</div>
-          <div class="skill-tag" style="--idx:14">Shopify</div>
-          <div class="skill-tag" style="--idx:15">TPS (Teradyne)</div>
-          <div class="skill-tag" style="--idx:16">Agentic AI</div>
-          <div class="skill-tag" style="--idx:17">LLMs / Prompt Eng.</div>
-          <div class="skill-tag" style="--idx:18">AI Automation</div>
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <span class="proj-badge">FYP</span>
+          </div>
+          <h3 class="proj-title">Solar E-Store</h3>
+          <p class="proj-desc">E-commerce application for solar products with payments, inventory management, and a seamless user experience.</p>
+          <div class="proj-tech">
+            <span>Flutter</span>
+            <span>Firebase</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-number">04</span>
-          <h2 class="section-title">Projects</h2>
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">Education</h2>
+      <div class="edu-grid reveal">
+        <div class="edu-card">
+          <span class="edu-year">2026</span>
+          <h3 class="edu-degree">BS Software Engineering</h3>
+          <span class="edu-school">Virtual University of Pakistan</span>
         </div>
-        <div class="projects-grid">
-          <div class="project-card reveal">
-            <div class="project-top">
-              <span class="project-status">Final Year Project</span>
-            </div>
-            <div class="project-tags">
-              <span>Flutter</span>
-              <span>IoT</span>
-            </div>
-            <h3 class="project-title">IoT Solar Automatic Rotation</h3>
-            <p class="project-desc">IoT-based solar tracking system that optimizes energy capture through automatic panel rotation based on real-time sun position.</p>
-          </div>
-          <div class="project-card reveal">
-            <div class="project-top">
-              <span class="project-status">Final Year Project</span>
-            </div>
-            <div class="project-tags">
-              <span>Flutter</span>
-              <span>Firebase</span>
-            </div>
-            <h3 class="project-title">Solar E-Store</h3>
-            <p class="project-desc">Full-featured e-commerce application for solar products with payments, inventory management, and seamless user experience.</p>
-          </div>
+        <div class="edu-card">
+          <span class="edu-year">2022</span>
+          <h3 class="edu-degree">ADSE (Software Engineering)</h3>
+          <span class="edu-school">Aptech Learning</span>
+        </div>
+        <div class="edu-card">
+          <span class="edu-year">2018</span>
+          <h3 class="edu-degree">ICS (Intermediate)</h3>
+          <span class="edu-school">Govt National College Karachi</span>
+        </div>
+        <div class="edu-card">
+          <span class="edu-year">2016</span>
+          <h3 class="edu-degree">Matriculation</h3>
+          <span class="edu-school">Fazaia Degree College</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="education" class="section">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-number">05</span>
-          <h2 class="section-title">Education</h2>
-        </div>
-        <div class="edu-grid reveal">
-          <div class="edu-card">
-            <span class="edu-year">2026</span>
-            <h3 class="edu-degree">BS Software Engineering</h3>
-            <span class="edu-school">Virtual University of Pakistan</span>
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title reveal">Contact</h2>
+      <p class="contact-desc reveal">Have a project or just want to say hello? I'll respond within 24 hours.</p>
+      <div class="contact-grid reveal">
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="Name" required />
+            <input type="email" placeholder="Email" required />
           </div>
-          <div class="edu-card">
-            <span class="edu-year">2022</span>
-            <h3 class="edu-degree">ADSE (Software Engineering)</h3>
-            <span class="edu-school">Aptech Learning Shahrah-e-Faisal</span>
-          </div>
-          <div class="edu-card">
-            <span class="edu-year">2018</span>
-            <h3 class="edu-degree">ICS (Intermediate)</h3>
-            <span class="edu-school">Govt National College Karachi</span>
-          </div>
-          <div class="edu-card">
-            <span class="edu-year">2016</span>
-            <h3 class="edu-degree">Matriculation</h3>
-            <span class="edu-school">Fazaia Degree College Faisal Karachi</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-alt">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-number">06</span>
-          <h2 class="section-title">Let's Connect</h2>
-        </div>
-        <p class="contact-desc reveal">Have a project in mind or just want to say hello? I'll respond within 24 hours.</p>
-        <div class="contact-grid reveal">
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-            </div>
-            <input type="text" placeholder="Subject" />
-            <textarea rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-          <div class="contact-info">
-            <a href="mailto:workwithsaddam@outlook.com" class="contact-item">
-              <span class="contact-item-icon">✉</span>
-              <span>workwithsaddam@outlook.com</span>
-            </a>
-            <a href="#" class="contact-item">
-              <span class="contact-item-icon">📞</span>
-              <span>0307-2843281</span>
-            </a>
-            <a href="#" class="contact-item">
-              <span class="contact-item-icon">📍</span>
-              <span>Karachi, Pakistan</span>
-            </a>
-            <div class="contact-downloads">
-              <a href="resume.pdf" target="_blank" class="btn btn-primary" download>Download Resume</a>
-              <a href="experience-letter.pdf" target="_blank" class="btn btn-outline" download>Experience Letter</a>
-            </div>
+          <input type="text" placeholder="Subject" />
+          <textarea rows="4" placeholder="Message" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div class="contact-side">
+          <a href="mailto:workwithsaddam@outlook.com" class="contact-item">
+            <span class="ci-icon">✉</span>
+            <span>workwithsaddam@outlook.com</span>
+          </a>
+          <a href="#" class="contact-item">
+            <span class="ci-icon">📞</span>
+            <span>0307-2843281</span>
+          </a>
+          <a href="#" class="contact-item">
+            <span class="ci-icon">📍</span>
+            <span>Karachi, Pakistan</span>
+          </a>
+          <div class="contact-btns">
+            <a href="resume.pdf" target="_blank" class="btn btn-primary" download>Resume</a>
+            <a href="experience-letter.pdf" target="_blank" class="btn btn-outline" download>Experience Letter</a>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-brand">
-          <a href="#" class="logo">SK<span class="text-accent">.</span></a>
-          <p>Software Engineer &amp; Agentic AI Developer</p>
+        <div>
+          <a href="#" class="logo">SK<span class="accent">.</span></a>
+          <p class="footer-tagline">Software Engineer &amp; Agentic AI Developer</p>
         </div>
         <div class="footer-links">
           <a href="#about">About</a>
@@ -346,13 +273,11 @@
           <a href="#contact">Contact</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Saddam Khan. Built with precision.</p>
-      </div>
+      <p class="footer-copy">&copy; 2026 Saddam Khan</p>
     </div>
   </footer>
 
-  <a href="#" class="back-to-top" id="backToTop">↑</a>
+  <a href="#" class="top-btn" id="topBtn">↑</a>
 
   <script src="main.js"></script>
 </body>

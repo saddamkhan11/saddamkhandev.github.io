@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* Loader */
   const loader = document.getElementById('loader');
-  window.addEventListener('load', () => setTimeout(() => loader.classList.add('hidden'), 400));
-  setTimeout(() => loader?.classList.add('hidden'), 3000);
+  if (loader) {
+    window.addEventListener('load', () => setTimeout(() => loader.classList.add('hidden'), 300));
+    setTimeout(() => loader.classList.add('hidden'), 2500);
+  }
 
-  /* Typing */
   const el = document.getElementById('typingText');
   if (el) {
     const words = ['Software Engineer', 'Agentic AI Developer', 'C# / .NET Developer', 'Avionics Specialist'];
@@ -13,53 +13,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loop() {
       const w = words[wi];
-      if (paused) { paused = false; deleting = true; setTimeout(loop, 1500); return; }
+      if (paused) { paused = false; deleting = true; setTimeout(loop, 1200); return; }
       if (!deleting) {
         el.textContent = w.substring(0, ci + 1); ci++;
-        if (ci === w.length) { paused = true; setTimeout(loop, 2000); return; }
-        setTimeout(loop, 60 + Math.random() * 40);
+        if (ci === w.length) { paused = true; setTimeout(loop, 1800); return; }
+        setTimeout(loop, 50 + Math.random() * 30);
       } else {
         el.textContent = w.substring(0, ci - 1); ci--;
-        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(loop, 400); return; }
-        setTimeout(loop, 30 + Math.random() * 20);
+        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(loop, 300); return; }
+        setTimeout(loop, 20 + Math.random() * 15);
       }
     }
     loop();
   }
 
-  /* Counter animation */
-  function animateCounter(el) {
-    const target = parseInt(el.getAttribute('data-count'));
-    if (!target) return;
-    let current = 0;
-    const step = Math.ceil(target / 35);
-    const interval = setInterval(() => {
-      current += step;
-      if (current >= target) { current = target; clearInterval(interval); }
-      el.textContent = current;
-    }, 40);
-  }
-
-  const counterObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.hero-stat-num').forEach(n => animateCounter(n));
-        counterObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  const stats = document.querySelector('.hero-stats');
-  if (stats) counterObs.observe(stats);
-
-  /* Scroll reveal */
   const revealObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-  /* Smooth scroll */
+  const stats = document.querySelector('.hero-stats');
+  if (stats) {
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.hero-stat-num').forEach(n => {
+            const target = parseInt(n.getAttribute('data-count'));
+            if (!target) return;
+            let cur = 0;
+            const step = Math.ceil(target / 30);
+            const interval = setInterval(() => {
+              cur += step;
+              if (cur >= target) { cur = target; clearInterval(interval); }
+              n.textContent = cur;
+            }, 40);
+          });
+          counterObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counterObs.observe(stats);
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function (e) {
       const h = this.getAttribute('href');
@@ -74,8 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* Header hide on scroll */
-  const header = document.getElementById('header');
+  const header = document.querySelector('.header');
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const cur = window.pageYOffset;
@@ -83,28 +79,31 @@ document.addEventListener('DOMContentLoaded', () => {
     lastScroll = cur;
   });
 
-  /* Back to top */
-  const backBtn = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => backBtn.classList.toggle('visible', window.pageYOffset > 400));
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', () => topBtn.classList.toggle('visible', window.pageYOffset > 400));
 
-  /* Hamburger */
   const ham = document.getElementById('hamburger');
   const nav = document.getElementById('navLinks');
-  ham.addEventListener('click', () => { ham.classList.toggle('active'); nav.classList.toggle('active'); });
+  if (ham && nav) {
+    ham.addEventListener('click', () => { ham.classList.toggle('active'); nav.classList.toggle('active'); });
+  }
 
-  /* Contact form */
-  document.getElementById('contactForm')?.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const btn = this.querySelector('button');
-    btn.textContent = '✓ Sent!';
-    btn.style.background = '#22c55e';
-    btn.style.borderColor = '#22c55e';
-    setTimeout(() => {
-      btn.textContent = 'Send Message';
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      this.reset();
-    }, 2500);
-  });
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      const orig = btn.textContent;
+      btn.textContent = '✓ Sent!';
+      btn.style.background = '#22c55e';
+      btn.style.borderColor = '#22c55e';
+      setTimeout(() => {
+        btn.textContent = orig;
+        btn.style.background = '';
+        btn.style.borderColor = '';
+        this.reset();
+      }, 2500);
+    });
+  }
 
 });
