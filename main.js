@@ -1,32 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const loader = document.getElementById('loader');
-  if (loader) {
-    window.addEventListener('load', () => setTimeout(() => loader.classList.add('hidden'), 300));
-    setTimeout(() => loader.classList.add('hidden'), 2500);
-  }
-
-  const el = document.getElementById('typingText');
-  if (el) {
-    const words = ['Software Engineer', 'Agentic AI Developer', 'C# / .NET Developer', 'Avionics Specialist'];
-    let wi = 0, ci = 0, deleting = false, paused = false;
-
-    function loop() {
-      const w = words[wi];
-      if (paused) { paused = false; deleting = true; setTimeout(loop, 1200); return; }
-      if (!deleting) {
-        el.textContent = w.substring(0, ci + 1); ci++;
-        if (ci === w.length) { paused = true; setTimeout(loop, 1800); return; }
-        setTimeout(loop, 50 + Math.random() * 30);
-      } else {
-        el.textContent = w.substring(0, ci - 1); ci--;
-        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; setTimeout(loop, 300); return; }
-        setTimeout(loop, 20 + Math.random() * 15);
-      }
-    }
-    loop();
-  }
-
   const revealObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); }
