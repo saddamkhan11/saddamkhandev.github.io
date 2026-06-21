@@ -5,14 +5,15 @@
 }
 
 :root {
-  --bg: #0a0a0f;
-  --bg-alt: #0e0e16;
-  --border: #1c1c2e;
-  --text: #eeeef4;
-  --text-2: #9999b0;
-  --text-3: #5a5a70;
-  --accent: #14b8a6;
-  --accent-dim: rgba(20, 184, 166, 0.08);
+  --bg: #0A0A0B;
+  --bg-alt: #0E0E12;
+  --border: #1C1C24;
+  --text: #F0F0F4;
+  --text-2: #9999A8;
+  --text-3: #5A5A6A;
+  --accent: #99FF00;
+  --accent-2: #C9E265;
+  --accent-dim: rgba(153, 255, 0, 0.08);
   --radius: 10px;
 }
 
@@ -122,6 +123,14 @@ body {
   position: relative;
 }
 
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(153, 255, 0, 0.15), transparent 58%);
+  pointer-events: none;
+}
+
 .hero-content {
   max-width: 700px;
 }
@@ -131,7 +140,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--text-3);
+  color: var(--accent-2);
   display: block;
   margin-bottom: 20px;
 }
@@ -218,10 +227,10 @@ body {
 }
 
 .btn-primary:hover {
-  background: #0d9488;
-  border-color: #0d9488;
+  background: #8ae600;
+  border-color: #8ae600;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.2);
+  box-shadow: 0 6px 20px rgba(153, 255, 0, 0.2);
 }
 
 .btn-outline {
@@ -246,7 +255,7 @@ body {
 .section-num {
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--text-3);
+  color: var(--accent-2);
   letter-spacing: 1px;
   display: block;
   margin-bottom: 8px;
